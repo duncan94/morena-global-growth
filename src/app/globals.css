@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand palette — warm, trustworthy, international, high-end */
+  --cream: #faf7f2;
+  --ivory: #f3ede4;
+  --sand: #e8dfd2;
+  --taupe: #9a8f84;
+  --charcoal: #2c2a27;
+  --ink: #1a1917;
+  --forest: #2f4038;
+  --sage: #4a6356;
+  --sage-soft: #6b8576;
+  --terracotta: #a65d4e;
+  --terracotta-deep: #8b4a3d;
+  --copper: #c4a882;
+  --white: #ffffff;
+  --muted: #6b6560;
+
+  --background: var(--cream);
+  --foreground: var(--charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-cream: var(--cream);
+  --color-ivory: var(--ivory);
+  --color-sand: var(--sand);
+  --color-taupe: var(--taupe);
+  --color-charcoal: var(--charcoal);
+  --color-ink: var(--ink);
+  --color-forest: var(--forest);
+  --color-sage: var(--sage);
+  --color-sage-soft: var(--sage-soft);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-copper: var(--copper);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--terracotta) 28%, transparent);
+  color: var(--ink);
+}
+
+/* Elegant focus rings */
+:focus-visible {
+  outline: 2px solid var(--terracotta);
+  outline-offset: 3px;
+}
+
+/* Soft gradient utilities */
+.bg-hero-glow {
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 20%, color-mix(in srgb, var(--sand) 70%, transparent), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, color-mix(in srgb, var(--copper) 18%, transparent), transparent 55%),
+    var(--cream);
+}
+
+.bg-section-soft {
+  background:
+    linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+}
+
+.bg-forest-depth {
+  background:
+    radial-gradient(ellipse 70% 80% at 100% 0%, color-mix(in srgb, var(--sage) 35%, transparent), transparent 50%),
+    var(--forest);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Subtle ornamental divider */
+.ornament {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--copper);
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, var(--copper), transparent);
+  opacity: 0.55;
+}
+
+/* Form inputs */
+.input-field {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--taupe) 45%, transparent);
+  background: var(--white);
+  padding: 0.875rem 1rem;
+  color: var(--charcoal);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-field::placeholder {
+  color: var(--taupe);
+}
+
+.input-field:focus {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--sage) 18%, transparent);
+  outline: none;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px -20px color-mix(in srgb, var(--charcoal) 28%, transparent);
+}
