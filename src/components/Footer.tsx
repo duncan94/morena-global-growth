@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { contactEmail } from "@/data/site";
 
 const links = [
   { href: "/over-mij", label: "Over mij" },
@@ -55,10 +56,10 @@ export default function Footer() {
               <li>Nederland · internationaal actief</li>
               <li>
                 <a
-                  href="mailto:info@morenaglobalgrowth.nl"
-                  className="transition hover:text-white"
+                  href={`mailto:${contactEmail}`}
+                  className="break-all transition hover:text-white"
                 >
-                  info@morenaglobalgrowth.nl
+                  {contactEmail}
                 </a>
               </li>
             </ul>

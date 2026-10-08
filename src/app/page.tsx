@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Button from "@/components/Button";
 import CTA from "@/components/CTA";
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import EstherPhoto from "@/components/EstherPhoto";
 import SectionHeading from "@/components/SectionHeading";
 import { audiences } from "@/data/audiences";
 import { services } from "@/data/services";
@@ -62,11 +62,11 @@ export default function HomePage() {
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-copper/20 blur-2xl" />
               <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-full bg-sage/15 blur-2xl" />
-              <PhotoPlaceholder
-                label="Esther Murina"
+              <EstherPhoto
                 caption="Oprichter · Coach & trainer"
                 aspect="portrait"
-                className="relative shadow-xl shadow-charcoal/10 ring-1 ring-sand"
+                priority
+                className="shadow-xl shadow-charcoal/10 ring-1 ring-sand"
               />
             </div>
           </div>
@@ -193,9 +193,7 @@ export default function HomePage() {
       {/* About teaser */}
       <section className="bg-ivory">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 md:grid-cols-2 md:px-8 md:py-20 lg:gap-16">
-          <PhotoPlaceholder
-            label="Esther Murina"
-            caption="Portret · professionele foto volgt"
+          <EstherPhoto
             aspect="square"
             className="shadow-lg shadow-charcoal/8 ring-1 ring-sand"
           />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import SectionHeading from "@/components/SectionHeading";
+import { contactEmail } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -33,10 +34,10 @@ export default function ContactPage() {
                     <li>Nederland · internationaal perspectief</li>
                     <li>
                       <a
-                        href="mailto:info@morenaglobalgrowth.nl"
-                        className="font-medium text-forest underline-offset-4 hover:underline"
+                        href={`mailto:${contactEmail}`}
+                        className="break-all font-medium text-forest underline-offset-4 hover:underline"
                       >
-                        info@morenaglobalgrowth.nl
+                        {contactEmail}
                       </a>
                     </li>
                   </ul>

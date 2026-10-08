@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { contactEmail } from "@/data/site";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
@@ -125,8 +126,8 @@ export default function ContactForm() {
 
       {status === "error" && (
         <p className="text-sm text-terracotta-deep">
-          Er ging iets mis. Probeer het opnieuw of mail direct naar
-          info@morenaglobalgrowth.nl.
+          Er ging iets mis. Probeer het opnieuw of mail direct naar{" "}
+          {contactEmail}.
         </p>
       )}
     </form>

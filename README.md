@@ -26,7 +26,7 @@ Premium website for **Morena Global Growth Coaching**, founded by Esther Murina.
 - **Feeling:** warm, trustworthy, international, high-end
 - **Tone:** warm, sharp, honest, calm, empowering — never superficial
 
-Photo placeholders are ready for professional portraits of Esther.
+Esther’s portrait is `public/images/esther-murina.jpeg`.
 
 ## Getting started
 
@@ -44,7 +44,7 @@ npm start
 
 ## Next steps (production)
 
-1. Replace photo placeholders with professional images of Esther (e.g. in `public/images/`)
-2. Connect the contact form to Formspree, Resend, or your own API
-3. Update the email address if different from `info@morenaglobalgrowth.nl`
-4. Add real domain, analytics, and privacy policy when ready
+1. Connect the contact form to Formspree, Resend, or your own API
+2. Add real domain, analytics, and privacy policy when ready
+
+Contact address: `infomorenaglobalgrowth@gmail.com`

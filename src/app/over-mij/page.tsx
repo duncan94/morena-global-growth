@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
 import CTA from "@/components/CTA";
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import EstherPhoto from "@/components/EstherPhoto";
 import SectionHeading from "@/components/SectionHeading";
 
 export const metadata: Metadata = {
@@ -51,10 +51,10 @@ export default function OverMijPage() {
               </p>
             </div>
             <div className="lg:col-span-6">
-              <PhotoPlaceholder
-                label="Esther Murina"
-                caption="Professionele portretfoto · placeholder"
+              <EstherPhoto
+                caption="Oprichter · Coach & trainer"
                 aspect="portrait"
+                priority
                 className="mx-auto max-w-md shadow-xl shadow-charcoal/10 ring-1 ring-sand lg:max-w-none"
               />
             </div>
